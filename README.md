@@ -17,4 +17,4 @@ O objetivo deste projeto é substituir apresentações estáticas (PDF) por uma 
 
 ## 🚀 Como Visualizar
 A proposta pode ser visualizada online através do link:
-`[COLE AQUI O LINK DO SEU GITHUB PAGES]`
+`[https://mmoura01.github.io/proposta_trajanos_engenharia/]`
