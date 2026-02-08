@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposta Comercial Exclusiva | Marcos Moura</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            light: '#F3E5AB',
+                            DEFAULT: '#D4AF37',
+                            dark: '#AF8F2C',
+                        },
+                        dark: {
+                            900: '#050505',
+                            800: '#0A0A0A',
+                            700: '#121212',
+                            600: '#1A1A1A',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'glow': 'glow 2s ease-in-out infinite alternate',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        glow: {
+                            'from': { textShadow: '0 0 10px #D4AF37, 0 0 20px #D4AF37' },
+                            'to': { textShadow: '0 0 20px #F3E5AB, 0 0 30px #F3E5AB' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .gold-glow {
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.15);
+        }
+
+        .gold-gradient {
+            background: linear-gradient(135deg, #D4AF37 0%, #F3E5AB 50%, #AF8F2C 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: all 0.5s ease;
+        }
+
+        .brand-hover:hover .gold-gradient {
+            filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.5));
+        }
+
+        .btn-gold {
+            background: linear-gradient(135deg, #D4AF37 0%, #F3E5AB 50%, #AF8F2C 100%);
+            transition: all 0.3s ease;
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .tech-bracket {
+            color: #D4AF37;
+            font-family: monospace;
+            opacity: 0.4;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: inline-block;
+        }
+
+        .brand-hover:hover .tech-bracket {
+            opacity: 1;
+            text-shadow: 0 0 15px rgba(212, 175, 55, 0.8);
+        }
+
+        .brand-hover:hover .tech-bracket:first-child {
+            transform: scale(1.4) translateX(-5px) rotate(-10deg);
+        }
+
+        .brand-hover:hover .tech-bracket:last-child {
+            transform: scale(1.4) translateX(5px) rotate(10deg);
+        }
+
+        .brand-text {
+            transition: all 0.5s ease;
+        }
+
+        .brand-hover:hover .brand-text {
+            letter-spacing: 0.05em;
+            filter: drop-shadow(0 0 12px rgba(212, 175, 55, 0.6));
+        }
+
+        .typewriter-cursor {
+            display: inline-block;
+            width: 2px;
+            height: 1.2em;
+            background-color: #D4AF37;
+            margin-left: 2px;
+            animation: blink 1s infinite;
+            vertical-align: middle;
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        .logo-pulse-sync {
+            animation: logoPulse 0.15s ease-out;
+        }
+
+        @keyframes logoPulse {
+            0% {
+                transform: scale(1);
+                border-color: rgba(212, 175, 55, 0.3);
+            }
+
+            50% {
+                transform: scale(1.1);
+                border-color: #D4AF37;
+                box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+            }
+
+            100% {
+                transform: scale(1);
+                border-color: rgba(212, 175, 55, 0.3);
+            }
+        }
+
+        .logo-spotlight {
+            background: #ffffff;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(212, 175, 55, 0.1);
+            border: 2px solid #D4AF37;
+        }
+
+        .logo-aura {
+            filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.05));
+        }
+    </style>
+</head>
+
+<body class="bg-dark-900 text-gray-300 font-sans selection:bg-gold/30 selection:text-white">
+
+    <!-- Header / Nav -->
+    <nav class="fixed w-full z-50 px-6 py-4 glass border-b border-white/5">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-4 brand-hover cursor-pointer group" id="main-brand">
+                <div class="relative">
+                    <img src="logo.png" alt="Marcos Moura Logo" id="my-logo"
+                        class="h-10 w-10 object-contain rounded-full border border-gold/30 group-hover:border-gold transition-all duration-300 z-10 relative bg-dark-900">
+                    <div
+                        class="absolute inset-0 bg-gold blur-md opacity-0 group-hover:opacity-30 transition-opacity duration-500 rounded-full">
+                    </div>
+                </div>
+                <div class="text-2xl font-serif font-bold gold-gradient flex items-center brand-text min-w-[280px]">
+                    <span class="tech-bracket mr-1">&lt;</span>
+                    <span id="typewriter-text" class="whitespace-nowrap">Marcos Moura</span>
+                    <span class="typewriter-cursor" id="cursor"></span>
+                    <span class="tech-bracket ml-1">/&gt;</span>
+                </div>
+            </div>
+            <div class="hidden md:flex gap-8 text-sm uppercase tracking-widest font-light">
+                <a href="#servicos" class="hover:text-gold transition-colors">Serviços</a>
+                <a href="#precos" class="hover:text-gold transition-colors">Investimento</a>
+                <a href="#contato" class="hover:text-gold transition-colors">Contato</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+        <!-- Background Elements -->
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
+            <div
+                class="absolute -top-[20%] -left-[10%] w-[50%] h-[80%] bg-gold/5 blur-[120px] rounded-full animate-pulse-slow">
+            </div>
+            <div
+                class="absolute -bottom-[20%] -right-[10%] w-[50%] h-[80%] bg-gold/5 blur-[120px] rounded-full animate-pulse-slow">
+            </div>
+        </div>
+
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <div class="flex flex-col items-center mb-8 animate-fade-in">
+                <!-- Logo Cliente -->
+                <div class="mb-6 relative group">
+                    <div
+                        class="w-40 h-40 rounded-full logo-spotlight transition-all duration-500 group-hover:scale-105 relative z-10 flex items-center justify-center">
+                        <img src="logo-cliente.png" alt="Trajanos Engenharia Logo"
+                            class="h-[85%] w-[85%] object-contain logo-aura">
+                    </div>
+                    <!-- Subtle Glow -->
+                    <div
+                        class="absolute inset-0 bg-gold/20 blur-2xl opacity-0 group-hover:opacity-40 transition-opacity rounded-full -z-10">
+                    </div>
+                </div>
+
+                <div
+                    class="inline-block px-4 py-1.5 rounded-full glass border-gold/30 text-gold text-xs font-semibold uppercase tracking-[0.2em]">
+                    Proposta Exclusiva Preparada para <span
+                        class="text-white underline underline-offset-4 decoration-gold/50">Ronilton Trajanos</span>
+                </div>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-serif font-bold text-white leading-tight mb-8">
+                Ecosistemas Digitais <br>
+                <span class="gold-gradient">de Autoridade Global</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-400 font-light max-w-3xl mx-auto mb-12 leading-relaxed">
+                Elevando a <span class="text-white font-medium italic">Trajanos Engenharia</span> ao padrão ouro
+                internacional. Segurança técnica entre <span class="text-gold font-medium">Brasil e Portugal</span> com
+                blindagem digital.
+            </p>
+            <a href="#servicos" class="inline-flex items-center gap-2 text-gold group">
+                <span class="text-sm uppercase tracking-widest font-semibold">Garantir Conformidade Digital</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 group-hover:translate-y-1 transition-transform"
+                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Seção de Serviços -->
+    <section id="servicos" class="py-24 bg-dark-800 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-serif font-bold text-white mb-4">Engenharia de <span
+                        class="gold-gradient">Impacto Digital</span></h2>
+                <p class="text-gray-500 max-w-2xl mx-auto">Posicionando a sua expertise em NR12 e NR13 no topo das
+                    decisões corporativas.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Serviço 1 -->
+                <div
+                    class="p-10 rounded-3xl glass border-white/5 hover:border-gold/30 transition-all duration-500 group">
+                    <div
+                        class="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center text-gold mb-6 group-hover:scale-110 transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Plataformas de Redação Técnica</h3>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        Traduzimos a complexidade das inspeções técnicas em uma narrativa de autoridade inquestionável,
+                        pronta para converter clientes no mercado industrial brasileiro.
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-2 italic">
+                        <li>• Copywriting focado em Normas Regulamentadoras</li>
+                        <li>• Galeria Estratégica de Projetos e Laudos</li>
+                        <li>• Otimização para Redução de Lead-Time de Vendas</li>
+                    </ul>
+                </div>
+
+                <!-- Serviço 2 -->
+                <div
+                    class="p-10 rounded-3xl glass border-white/5 hover:border-gold/30 transition-all duration-500 group">
+                    <div
+                        class="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center text-gold mb-6 group-hover:scale-110 transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Portfólios de Autoridade Elite</h3>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        Construímos o alicerce digital da Trajanos Engenharia, permitindo que a sua presença em Brasil
+                        seja tão sólida quanto o seu currículo europeu.
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-2 italic">
+                        <li>• Curadoria visual de inspeções técnicas</li>
+                        <li>• Storytelling de Segurança do Trabalho</li>
+                        <li>• Prova Social de Alto Calibre</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tabela de Preços -->
+    <section id="precos" class="py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-serif font-bold text-white mb-4">Investimento Estratégico</h2>
+                <p class="text-gray-500 max-w-2xl mx-auto">Escolha o nível de autoridade que a sua engenharia exige no
+                    Brasil.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Standard -->
+                <div class="p-8 rounded-3xl glass border-white/10 flex flex-col hover:border-white/20 transition-all">
+                    <h3 class="text-xl font-bold text-white mb-2">Plano Presença Digital</h3>
+                    <p class="text-sm text-gray-500 mb-8 leading-relaxed">Landing Page de alta performance, focada em
+                        conversão imediata, otimizada para dispositivos móveis, com ligação direta ao WhatsApp e
+                        alojamento por 12 meses.</p>
+
+                    <div class="mb-8 font-serif border-t border-white/5 pt-6">
+                        <div class="text-sm text-gray-400 mb-1 tracking-widest uppercase">Investimento Único</div>
+                        <div class="text-4xl font-bold text-white">R$ 1.800</div>
+                        <div class="text-xl text-gold/80 italic font-light mt-1">€ 310,00</div>
+                    </div>
+
+                    <div class="mt-auto">
+                        <ul class="space-y-4 mb-8 text-sm">
+                            <li class="flex items-center gap-3"><span class="text-gold">●</span> Design Base Responsivo
+                                Elite</li>
+                            <li class="flex items-center gap-3"><span class="text-gold">●</span> Copywriting Focado em
+                                NR12/NR13</li>
+                            <li class="flex items-center gap-3"><span class="text-gold">●</span> Otimização de SEO
+                                Fluído</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Premium -->
+                <div
+                    class="p-8 rounded-3xl glass border-gold/50 gold-glow relative overflow-hidden flex flex-col hover:scale-[1.02] transition-all">
+                    <div
+                        class="absolute top-0 right-0 px-4 py-1 bg-gold text-dark-900 text-[10px] font-bold uppercase tracking-widest rounded-bl-xl">
+                        Escolha Ronilton</div>
+
+                    <h3 class="text-xl font-bold text-white mb-2">Plano Autoridade Elite</h3>
+                    <p class="text-sm text-gray-500 mb-8 font-medium leading-relaxed">Plataforma Institucional completa
+                        com Copywriting Profissional (Redação Técnica), SEO Local para dominar as buscas locais e
+                        Galeria de Projetos Estratégica.</p>
+
+                    <div class="mb-8 font-serif border-t border-gold/10 pt-6">
+                        <div class="text-sm text-gray-400 mb-1 tracking-widest uppercase">Investimento Estratégico</div>
+                        <div class="text-4xl font-bold gold-gradient text-gold">R$ 3.500</div>
+                        <div class="text-xl text-gold italic font-light mt-1">€ 600,00</div>
+                    </div>
+
+                    <div class="mt-auto">
+                        <ul class="space-y-4 mb-8 text-sm">
+                            <li class="flex items-center gap-3"><span class="text-gold">★</span> Estratégia High-Ticket
+                                & Redação Técnica</li>
+                            <li class="flex items-center gap-3"><span class="text-gold">★</span> Conformidade
+                                Internacional: <span class="text-white">GDPR (UE) & LGPD (BR)</span></li>
+                            <li class="flex items-center gap-3"><span class="text-gold">★</span> SEO Local & Global para
+                                Domínio de Mercado</li>
+                            <li class="flex items-center gap-3"><span class="text-gold">★</span> Galeria Estratégica
+                                Blindada de Laudos e Inspeções</li>
+                            <li class="flex items-center gap-3"><span class="text-gold">★</span> Consultoria de Branding
+                                Europeu/Brasil</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bónus -->
+    <section id="bonus" class="py-24 bg-dark-800">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="p-12 rounded-3xl glass border-dashed border-gold/30 text-center relative group">
+                <div
+                    class="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-dark-900 border border-gold/50 rounded-full flex items-center justify-center text-xl text-gold group-hover:rotate-12 transition-transform duration-500">
+                    🛡️</div>
+                <h2 class="text-2xl font-serif font-bold text-white mb-4">Seguro de Autoridade (12 Meses)</h2>
+                <div class="text-lg text-gold font-light italic mb-6 leading-relaxed">
+                    Inclui manutenção técnica proativa, atualizações rigorosas de segurança e a inserção mensal de novos
+                    laudos e fotos de inspeções sem qualquer custo adicional.
+                </div>
+                <p class="text-gray-500 text-sm italic">Garantia de que a Trajanos Engenharia estará sempre à frente
+                    tecnicamente.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <footer id="contato" class="py-24 text-center">
+        <div class="max-w-2xl mx-auto px-6">
+            <h2 class="text-4xl font-serif font-bold text-white mb-8">Vamos Elevar o Standard da Trajanos?</h2>
+            <p class="text-gray-400 mb-12">Disponível para alinhamento via WhatsApp ou Email corporativo.</p>
+
+            <div class="flex flex-col md:flex-row gap-6 justify-center items-center mb-16">
+                <!-- WhatsApp -->
+                <a href="https://wa.me/5592993426359" target="_blank"
+                    class="btn-gold flex items-center gap-4 px-10 py-5 rounded-full text-dark-900 font-bold text-lg uppercase tracking-widest group">
+                    <span>WhatsApp</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 group-hover:rotate-12 transition-transform"
+                        fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.992-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.316 1.592 5.43 0 9.856-4.426 9.858-9.855.002-5.429-4.428-9.856-9.859-9.856-5.431 0-9.856 4.427-9.858 9.856 0 2.043.601 3.652 1.6 5.326l-.995 3.638 3.737-.981zm10.605-7.14c-.211-.106-1.248-.617-1.442-.686-.193-.069-.335-.104-.475.106-.141.209-.544.686-.667.822-.122.137-.245.154-.457.049-.211-.106-.893-.329-1.701-1.049-.629-.561-1.053-1.254-1.176-1.466-.123-.211-.013-.326.092-.431.095-.095.211-.245.317-.367.106-.122.141-.209.211-.348.071-.14.035-.262-.017-.367-.053-.106-.475-1.144-.651-1.567-.171-.412-.343-.356-.475-.363-.122-.006-.263-.008-.403-.008-.141 0-.37.053-.563.262-.193.21-.738.721-.738 1.758s.755 2.037.861 2.179c.106.14 1.485 2.268 3.593 3.179.502.216.893.345 1.198.441.504.161.964.138 1.326.084.405-.06 1.248-.511 1.423-1.004.176-.492.176-.914.123-1.004-.052-.09-.193-.143-.404-.249z" />
+                    </svg>
+                </a>
+
+                <!-- Email -->
+                <a href="mailto:marcosuchoa2007@gmail.com"
+                    class="glass border-gold/30 flex items-center gap-4 px-10 py-5 rounded-full text-gold font-bold text-lg uppercase tracking-widest hover:border-gold transition-all duration-300">
+                    <span>Email</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                </a>
+            </div>
+
+            <div class="mt-16 pt-8 border-t border-white/5 text-gray-600 text-xs">
+                © 2026 Marcos Moura. Direitos Reservados. <br>
+                Esta proposta é confidencial e destinada exclusivamente ao uso interno de Ronilton Trajanos (Trajanos
+                Engenharia).
+            </div>
+        </div>
+    </footer>
+
+    <!-- Animations Library -->
+    <script>
+        // Smooth reveal on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section, footer').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+
+        // Typewriter Effect
+        const textElement = document.getElementById('typewriter-text');
+        const logoElement = document.getElementById('my-logo');
+        const cursorElement = document.getElementById('cursor');
+        const name = "Marcos Moura";
+        const title = "Desenvolvedor Web";
+        let isDeleting = false;
+        let txt = '';
+        let wordIndex = 0;
+        const words = [name, title];
+        let typeSpeed = 150;
+
+        function type() {
+            const current = wordIndex % words.length;
+            const fullTxt = words[current];
+
+            if (isDeleting) {
+                txt = fullTxt.substring(0, txt.length - 1);
+            } else {
+                txt = fullTxt.substring(0, txt.length + 1);
+                // Pulse logo on each new character
+                logoElement.classList.remove('logo-pulse-sync');
+                void logoElement.offsetWidth; // trigger reflow
+                logoElement.classList.add('logo-pulse-sync');
+            }
+
+            textElement.textContent = txt;
+
+            if (!isDeleting && txt === fullTxt) {
+                typeSpeed = 3000; // Wait at end
+                isDeleting = true;
+                cursorElement.style.display = 'inline-block';
+            } else if (isDeleting && txt === '') {
+                isDeleting = false;
+                wordIndex++;
+                typeSpeed = 500;
+            } else {
+                typeSpeed = isDeleting ? 50 : 150;
+            }
+
+            setTimeout(() => type(), typeSpeed);
+        }
+
+        // Start typewriter
+        window.addEventListener('load', () => {
+            setTimeout(type, 1000);
+        });
+    </script>
+</body>
+
+</html>
